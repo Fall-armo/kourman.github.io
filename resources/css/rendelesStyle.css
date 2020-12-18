@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+html {
+    color: white;
+    background: #131313;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+}
+
+/******************************/
+        /* NAVBAR */
+/******************************/
+
+
+.navbar {
+    background-color: rgba(13, 13, 13);
+    padding-top: 0.5% !important;
+    padding-bottom: 0.5% !important;
+    transition: all 1.25s ease-in-out;
+}
+
+.navbar-nav li a:link,
+.navbar-nav li a:visited {
+    color: white !important;
+    font-size: 0.9rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    border-style: none;
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li a:active {
+    color: #257cda !important;
+    text-shadow: 0rem 0rem 0.1rem #257cda;
+}
+
+.fas .far {
+    font-size: 0.9rem;
+}
+
+#menusav .modal-dialog {
+    font-size: 0.9rem;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: auto;
+    background-color: rgba(13, 13, 13, 0.98);
+    border-color: transparent;
+    width: 50%;
+    overflow-y: auto;
+}
+
+#menusav .modal-content {
+    border: none;
+    border-radius: 0;
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    font-size: 0.9rem;
+}
+
+#menusav .modal .modal-header {
+    border-bottom: 0.05rem solid transparent;
+    padding-bottom: 0 !important;
+}
+
+#menusav .modal-title {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-shadow: 0rem 0rem 0.5rem white;
+}
+
+#menusav #homerseklet {
+    color: #257cda;
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-shadow: 0rem 0rem 0.5rem #257cda;
+}
+
+#menusav .napLabel {
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+}
+
+#menusav .form-control {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    outline: none !important;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: rgba(13, 13, 13, 0.98);
+    text-decoration: none;
+    box-shadow: none;
+}
+
+#menusav #ajanlat {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+#menusav #minHom {
+    color: #257cda;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-shadow: 0rem 0rem 0.5rem #257cda;
+}
+
+#menusav #maxHom {
+    color: #e62739;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-shadow: 0rem 0rem 0.5rem #e62739;
+}
+
+#menusav #atlagHom {
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-shadow: 0rem 0rem 0.5rem white;
+}
+
+#menusav .modal-footer {
+    border-top: 1px solid transparent;
+}
+
+#menusav .modal .closeGomb {
+    background-image: linear-gradient(to right, #257cda 0%, #164b83 51%, #257cda 100%);
+    background-size: 200% auto;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    color: white;
+    text-decoration: none;
+    border: 0.1rem solid #257cda;
+    transition: 0.5s;
+    box-shadow: 0 0 0 1px rgba(13, 13, 13, 0.2);
+}
+
+#menusav .modal .closeGomb:hover,
+#menusav .modal .closeGomb:active {
+    background-position: right center;
+}
+
+@media only screen and (max-width: 576px) {
+    .navbar-toggler {
+        margin-right: 0%;
+    }
+
+    .navbar-nav li a:link,
+    .navbar-nav li a:visited {
+        color: white;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05rem;
+        border-style: none;
+        text-decoration: none;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .navbar-nav li a:hover,
+    .navbar-nav li a:active {
+        color: #257cda !important;
+        text-shadow: 0rem 0rem 0.1rem #257cda;
+    }
+
+    #menusav .modal-dialog {
+        font-size: 0.9rem;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: auto;
+        background-color: rgba(13, 13, 13, 0.98);
+        border-color: transparent;
+        width: 100%;
+        overflow-y: auto;
+    }
+}
+
+
+/******************************/
+        /* RENDELÉS */
+/******************************/
+
+
+#rendeles {
+    color: white;
+    background-image: linear-gradient(to right bottom, rgba(13,13,13,0.96), rgba(13,13,13,0.98));
+    background-size: cover;
+    background-position: center;
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem !important;
+}
+
+#rendeles .jumbotron {
+    background-color: transparent;
+    line-height: 1.75rem;
+}
+
+#rendeles .jumbotron hr {
+    border-top: 1px solid white;
+}
+
+#rendeles .display-4 {
+    font-size: 2.25rem;
+    text-transform: uppercase;
+}
+
+#rendeles .lead {
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+#rendeles .arSzoveg {
+    color: #257cda;
+    font-weight: 400;
+}
+
+#rendeles .hazhozSzoveg {
+    font-weight: 300;
+    font-size: 0.75rem;
+}
+
+#rendeles .form-control {
+    background-color: rgb(255, 255, 255, 0.96) !important;
+}
+
+#rendeles #kiszamitGomb {
+    background-image: linear-gradient(to right, #257cda 0%, #164b83 51%, #257cda 100%);
+    background-size: 200% auto;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    letter-spacing: 0.1rem;
+    color: white;
+    text-decoration: none;
+    border: 0.1rem solid #257cda;
+    transition: 0.5s;
+    box-shadow: 0 0 0 1px rgba(13, 13, 13, 0.2);
+}
+
+#rendeles #kiszamitGomb:hover,
+#rendeles #kiszamitGomb:active {
+    background-position: right center;
+}
+
+#rendeles #kiszamitGomb.focus, #kiszamitGomb:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#rendeles #megrendelGomb {
+    background-image: linear-gradient(to right, #257cda 0%, #164b83 51%, #257cda 100%);
+    background-size: 200% auto;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    color: white;
+    text-decoration: none;
+    border: 0.1rem solid #257cda;
+    transition: 0.5s;
+    box-shadow: 0 0 0 1px rgba(13, 13, 13, 0.2);
+}
+
+#rendeles #megrendelGomb:hover,
+#rendeles #megrendelGomb:active {
+    background-position: right center;
+}
+
+#rendeles #megrendelGomb.focus, #megrendelGomb:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#rendeles .csillag {
+    color: #257cda;
+}
+
+#rendeles .fizetendo {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#rendeles .osszeg {
+    color: #257cda;
+}
+

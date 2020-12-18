@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rólunk</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="./resources/css/rolunkStyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'/>
+
+</head>
+
+<body onload="idojarasWidget()">
+
+    <section id="menusav">
+
+        <nav id="navigacio" class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#osszeccsuk" aria-controls="osszeccsuk" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="osszeccsuk">
+        
+                <ul class="navbar-nav align-items-center text-center m-auto">
+                    <li class="nav-item pr-2 pl-2">
+                        <a href="index.html" class="nav-link">Kourman</a>
+                    </li>
+                    <li class="nav-item pr-2 pl-2">
+                        <a href="rolunk.html" class="nav-link"><i class="fas fa-receipt"></i> Rólunk</a>
+                    </li>
+                    <li class="nav-item pr-2 pl-2">
+                        <a href="#" class="nav-link" data-toggle="modal" data-target="#akcioModal"><i class="fas fa-percentage"></i> Akciók</a>
+                    </li>
+                    <li class="nav-item pr-2 pl-2">
+                        <a href="rendeles.html" class="nav-link"><i class="fas fa-shipping-fast"></i> Rendelés</a>
+                    </li>
+                    <li class="nav-item pr-2 pl-2">
+                        <a href="kapcsolat.html" class="nav-link"><i class="far fa-building"></i> Kapcsolat</a>
+                    </li>
+                </ul>
+    
+            </div>
+        
+        </nav>
+
+        <div class="modal fade" id="akcioModal" tabindex="-1" role="dialog" aria-labelledby="akcioModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header align-items-center mt-5 pt-5">
+                        <h5 class="modal-title text-left pl-3" id="akcioModalLabel">Akcióink</h5>
+                        <span id="homerseklet" class="col text-right"></span>
+                    </div>
+
+                    <div class="modal-body align-items-center text-center">
+                        <div class="container">
+
+                            <div class="row pt-3">
+                                <div class="col">
+                                    <form>
+                                        <form class="form-inline">
+                                            <label for="szosz" class="napLabel pb-2">Kérlek, válassz napot: </label>
+                                            <select class="form-control form-control-sm mt-1 mb-5" id="nap" onclick="idojarasWidget()">
+                                                <option selected value="0">Hétfő</option>
+                                                <option value="1">Kedd</option>
+                                                <option value="2">Szerda</option>
+                                                <option value="3">Csütörtök</option>
+                                                <option value="4">Péntek</option>
+                                                <option value="5">Szombat</option>
+                                                <option value="6">Vasárnap</option>
+                                            </select>               
+                                        </form>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="row pt-2 pb-5">
+                                <div id="ajanlat" class="col"></div>
+                            </div>
+
+                            <div class="row pt-3 pb-4">
+                                <div id="minHom" class="col-md-4"></div>
+                                <div id="maxHom" class="col-md-4"></div>
+                                <div id="atlagHom" class="col-md-4"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="closeGomb btn btn-secondary" data-dismiss="modal">Bezárás</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="tortenetunk">
+
+        <div class="container pt-5 pb-5">
+            <div class="row text-center pt-5 pb-3">
+                <div class="elhatarozasCim col-md-8 offset-md-2">Elhatározás</div>      <!-- elhatározás -->
+            </div>
+            <div class="row">
+                <div class="idezetCsik col-md-2 offset-md-5 pb-4"></div>
+            </div>
+            <div class="row text-center pb-4">
+                <div class="elhatarozasSzoveg col-md-8 offset-md-2">1972-ben, egy városi séta alkalmával megfogalmazódott a gondolat: <b>'Lehetséges-e a street foodot magasabb kategóriába emelni, egyedi élményt kínálva, miközben megmarad annak, aminek szeretjük?'</b></div>
+            </div>
+
+            <div class="row text-center align-items-center">        <!-- fele kép - fele szöveg -->
+                <div class="col-md-6 text-right">
+                    <p class="elsoP">Az alapítás</p>
+                    <p class="masodikP">Akkor és most</p>
+                    <p class="harmadikP pl-4">Első szárnypróbálgatásunk Pécsett történt, a mai Király utca szívében. Kezdetben a Színház látogatói tartoztak a vendégkörünkhoz, fokozatosan gyarapodva. <br><br> Ennek a növekedésnek hála kezdhettünk el terjeszkedni, meghódítva más városokat, fogyasztóink szívét, s vált egy klasszikus, szürke épület a környék színfoltjává.</p>
+                </div>
+                <div class="col-md-6"><img class="kepek img-fluid p-4" src="./resources/img/burgerBacon.jpg" alt="Hamburger"></div>
+            </div>
+
+            <div class="row text-center align-items-center">
+                <div class="col-md-6"><img class="kepek img-fluid p-4" src="./resources/img/burgerKesztyu.jpg" alt="Hamburger"></div>
+                <div class="col-md-6 text-left">
+                    <p class="elsoP">A jelen</p>
+                    <p class="masodikP">Nemzetközi vizeken</p>
+                    <p class="harmadikP pr-4">1992-re elértük azt a szintet, hogy átléphettük az országhatárt, nyitottunk Ausztria, Németország és Lengyelország felé. <br><br> Részvényeseinknek hála haladhattunk az eltervezett úton, mára étteremláncunk bármely üzletébe betérve elegáns környezet, világszinvonalú kiszolgálás és többszörösen díjnyertes ételek várják az ínyenceket.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container pt-2 pb-5">
+            <div class="row text-center align-items-center">        <!-- egymás melletti számok -->
+                <div class="col-md-4 pl-4 pr-4">
+                    <span class="szamP">17</span> <br>
+                    <span class="szamAlattP">Étterem</span> <br>
+                    <span class="szamAlattKisebbP"><b>Nemzetközi viszonylatban</b></span>
+                </div>
+                <div class="col-md-4 pl-4 pr-4">
+                    <span class="szamP">136</span> <br>
+                    <span class="szamAlattP">Dolgozó</span> <br>
+                    <span class="szamAlattKisebbP"><b>Különleges képességekkel</b></span>
+                </div>
+                <div class="col-md-4 pl-4 pr-4">
+                    <span class="szamP">8</span> <br>
+                    <span class="szamAlattP">Kitüntetés</span> <br>
+                    <span class="szamAlattKisebbP"><b>Európai bírák által</b></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container pt-5 pb-5">       <!-- idézet -->
+            <div class="row">
+                <div class="idezetCsik col-md-2 offset-md-5 pb-4"></div>
+            </div>
+            <div class="row text-center">
+                <div class="idezetSzoveg col-md-8 offset-md-2 pt-3 pb-3">"Ne csak tervezz! Olyan rövid az élet! Ne a fejedben létezzenek az álmok, menj, cselekedj és éld meg őket!"</b></div>
+            </div>
+            <div class="row text-center pb-5">
+                <div class="idezetNev col-md-8 offset-md-2">- Peter Krieger, alapító</div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="./resources/js/idojaras.js"></script>
+    <script src="./resources/js/scrollNav.js"></script>
+    <script src="https://kit.fontawesome.com/6241e89c41.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+</body>
+</html>

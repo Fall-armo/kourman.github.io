@@ -1,0 +1,765 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+html {
+    color: white;
+    background: #131313;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+}
+
+/******************************/
+        /* NAVBAR */
+/******************************/
+
+
+.navbar {
+    background-color: rgba(13, 13, 13);
+    padding-top: 0.5% !important;
+    padding-bottom: 0.5% !important;
+    transition: all 1.25s ease-in-out;
+}
+
+.navbar-nav li a:link,
+.navbar-nav li a:visited {
+    color: white !important;
+    font-size: 0.9rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    border-style: none;
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li a:active {
+    color: #257cda !important;
+    text-shadow: 0rem 0rem 0.1rem #257cda;
+}
+
+.fas .far {
+    font-size: 0.9rem;
+}
+
+#menusav .modal-dialog {
+    font-size: 0.9rem;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: auto;
+    background-color: rgba(13, 13, 13, 0.98);
+    border-color: transparent;
+    width: 50%;
+    overflow-y: auto;
+}
+
+#menusav .modal-content {
+    border: none;
+    border-radius: 0;
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    font-size: 0.9rem;
+}
+
+#menusav .modal .modal-header {
+    border-bottom: 0.05rem solid transparent;
+    padding-bottom: 0 !important;
+}
+
+#menusav .modal-title {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-shadow: 0rem 0rem 0.5rem white;
+}
+
+#menusav #homerseklet {
+    color: #257cda;
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-shadow: 0rem 0rem 0.5rem #257cda;
+}
+
+#menusav .napLabel {
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+}
+
+#menusav .form-control {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    outline: none !important;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: rgba(13, 13, 13, 0.98);
+    text-decoration: none;
+    box-shadow: none;
+}
+
+#menusav #ajanlat {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+#menusav #minHom {
+    color: #257cda;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-shadow: 0rem 0rem 0.5rem #257cda;
+}
+
+#menusav #maxHom {
+    color: #e62739;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-shadow: 0rem 0rem 0.5rem #e62739;
+}
+
+#menusav #atlagHom {
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-shadow: 0rem 0rem 0.5rem white;
+}
+
+#menusav .modal-footer {
+    border-top: 1px solid transparent;
+}
+
+#menusav .modal .closeGomb {
+    background-image: linear-gradient(to right, #257cda 0%, #164b83 51%, #257cda 100%);
+    background-size: 200% auto;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    color: white;
+    text-decoration: none;
+    border: 0.1rem solid #257cda;
+    transition: 0.5s;
+    box-shadow: 0 0 0 1px rgba(13, 13, 13, 0.2);
+}
+
+#menusav .modal .closeGomb:hover,
+#menusav .modal .closeGomb:active {
+    background-position: right center;
+}
+
+@media only screen and (max-width: 576px) {
+    .navbar-toggler {
+        margin-right: 0%;
+    }
+
+    .navbar-nav li a:link,
+    .navbar-nav li a:visited {
+        color: white;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05rem;
+        border-style: none;
+        text-decoration: none;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .navbar-nav li a:hover,
+    .navbar-nav li a:active {
+        color: #257cda !important;
+        text-shadow: 0rem 0rem 0.1rem #257cda;
+    }
+
+    #menusav .modal-dialog {
+        font-size: 0.9rem;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: auto;
+        background-color: rgba(13, 13, 13, 0.98);
+        border-color: transparent;
+        width: 100%;
+        overflow-y: auto;
+    }
+}
+
+
+/******************************/
+        /* KEZDŐLAP */
+/******************************/
+
+
+#kezdolap {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65) ), url(./resources/img/burgerParadicsom.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 20%;
+}
+
+#kezdolap .text-box {
+    color: white;
+    position: absolute;
+    top: 30vh;
+}
+
+#kezdolap .text-box h1 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 3.5rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.25rem;
+    text-align: right;
+    margin-bottom: 3%;
+    text-shadow: 0rem 0rem 0.5rem white;
+}
+
+#kezdolap .text-box .kisebbh1 {
+    font-size: 2.25rem;
+    text-align: right;
+    margin-bottom: 10%;
+    animation: villogas 5s infinite;
+}
+
+@keyframes villogas {
+    0% {text-shadow: 0rem 0rem 0rem white;}
+    50% {text-shadow: 0rem 0rem 0.5rem white;}
+    100% {text-shadow: 0rem 0rem 0rem white;}
+}
+
+#kezdolap .text-box h3 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    word-spacing: 0.25rem;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+#kezdolap .fooldalGomb {
+    padding-right: 5%;
+}
+
+#kezdolap .keretes {
+    color: white;
+    background-color: rgba(13, 13, 13, 0.5);
+    top: 15vh;
+    border-color: white;
+    border-style: solid;
+    border-width: 0.05rem;
+    border-radius: 0.5rem;
+    padding-top: 7%;
+    padding-right: 5%;
+    padding-bottom: 7%;
+    padding-left: 5%;
+    box-shadow: 0 0.1rem 0.1rem white;
+}
+
+#kezdolap .keretes h3 {
+    text-transform: uppercase;
+    font-weight: 300 !important;
+    font-size: 1.5rem !important;
+    letter-spacing: 0.05rem !important;
+    word-spacing: 0.25rem !important;
+}
+
+#kezdolap .keretes .terkepGomb {
+    background-image: linear-gradient(to right, #257cda 0%, #164b83 51%, #257cda 100%);
+    background-size: 200% auto;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    color: white;
+    text-decoration: none;
+    border: 0.1rem solid #257cda;
+    transition: 0.5s;
+    box-shadow: 0 0 0 1px rgba(13, 13, 13, 0.2);
+}
+
+#kezdolap .keretes .terkepGomb:hover,
+#kezdolap .keretes .terkepGomb:active {
+    background-position: right center;
+}
+
+#kezdolap .keretes .vilagit {
+    text-shadow: 0rem 0rem 0.5rem white;
+}
+
+#kezdolap .text-box .btn-full {
+    color: white;
+    font-size: 1rem !important;
+    letter-spacing: 0.1rem !important;
+    word-spacing: 0.25rem !important;
+    margin-top: 5%;
+    margin-left: 25%;
+    padding: 0.75rem 2.25rem;
+    text-decoration: none;
+    border: 0.1rem solid #257cda;
+    border-radius: 200px 20px 200px 20px !important;
+    background-image: linear-gradient(to right, rgba(13, 13, 13, 0.5) 0%, rgba(13, 13, 13, 0.9) 51%, rgba(13, 13, 13, 0.5) 100%);
+    background-size: 200% auto;
+    transition: 0.5s;
+    box-shadow: 0 0 0 1px rgba(13, 13, 13, 0.2);
+}
+
+#kezdolap .text-box .btn-full:hover,
+#kezdolap .text-box .btn-full:active {
+    background-position: right center;
+}
+
+#kezdolap .btn.focus, .btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#kezdolap .modal .modal-header {
+    border-bottom: 0.05rem solid transparent;
+    padding-bottom: 0 !important;
+}
+
+#kezdolap .modal-title {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+#kezdolap .modal .modal-dialog .modal-content {
+    background-color: rgba(13, 13, 13, 0.98);
+    border-width: 0.1rem;
+    border-color: transparent;
+    font-size: 0.9rem;
+}
+
+#kezdolap .modal .closeGomb {
+    background-image: linear-gradient(to right, #257cda 0%, #164b83 51%, #257cda 100%);
+    background-size: 200% auto;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    color: white;
+    text-decoration: none;
+    border: 0.1rem solid #257cda;
+    transition: 0.5s;
+    box-shadow: 0 0 0 1px rgba(13, 13, 13, 0.2);
+}
+
+#kezdolap .modal-footer {
+    border-top: 1px solid transparent;
+    background: rgba(13, 13, 13, 1);
+}
+
+#kezdolap .modal .closeGomb:hover,
+#kezdolap .modal .closeGomb:active {
+    background-position: right center;
+}
+
+@media only screen and (max-width: 1024px) {
+    #kezdolap {
+        padding-bottom: 35%;
+    }
+    
+    #kezdolap .text-box {
+        color: white;
+        position: relative;
+        top: 25vh;
+    }
+    
+    #kezdolap .text-box h1 {
+        font-size: 2.5rem;
+    }
+    
+    #kezdolap .text-box .kisebbh1 {
+        font-size: 1.5rem;
+    }
+    
+    #kezdolap .text-box h3 {
+        font-size: 1.25rem;
+    }
+    
+    #kezdolap .fooldalGomb {
+        padding-right: 0%;
+    }
+
+    #kezdolap .text-box .btn-full {
+        color: white;
+        font-size: 0.9rem !important;
+        letter-spacing: 0.1rem !important;
+        word-spacing: 0.25rem !important;
+        margin-bottom: 15% !important;
+        margin-left: 0% !important;
+        padding: 0.75rem 2.25rem;
+        text-decoration: none;
+        border: 0.1rem solid #257cda;
+        border-radius: 200px 20px 200px 20px !important;
+        background-image: linear-gradient(to right, rgba(13, 13, 13, 0.5) 0%, rgba(13, 13, 13, 0.9) 51%, rgba(13, 13, 13, 0.5) 100%);
+        background-size: 200% auto;
+        transition: 0.5s;
+        box-shadow: 0 0 0 1px rgba(13, 13, 13, 0.2);
+    }
+    
+    #kezdolap .text-box .btn-full:hover,
+    #kezdolap .text-box .btn-full:active {
+        background-position: right center;
+    }
+    
+    #kezdolap .btn.focus, .btn:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    #kezdolap .keretes {
+        padding-top: 7%;
+        padding-right: 5%;
+        padding-bottom: 7%;
+        padding-left: 5%;
+    }
+    
+    #kezdolap .keretes h3 {
+        font-size: 1.25rem !important;
+    }
+}
+
+@media only screen and (max-width: 576px) { 
+    #kezdolap {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65) ), url(./resources/img/burgerMobile.jpg);
+        background-size: cover;
+        background-position: center;
+        padding-bottom: 50%;
+    }
+
+    #kezdolap .text-box {
+        color: white;
+        position: relative;
+        top: 15vh !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    #kezdolap .text-box h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 10%;
+    }
+    
+    #kezdolap .text-box .kisebbh1 {
+        color: #e62739;
+        font-size: 1.25rem;
+        text-align: center;
+        line-height: 150%;
+        margin-bottom: 15%;
+        animation: telefonVillogas 5s infinite;
+    }
+
+    @keyframes telefonVillogas {
+        0% {text-shadow: 0rem 0rem 0rem #e62739;}
+        50% {text-shadow: 0rem 0rem 0.5rem #e62739;}
+        100% {text-shadow: 0rem 0rem 0rem #e62739;}
+    }
+    
+    #kezdolap .text-box h3 {
+        font-size: 1rem;
+        text-align: center;
+        line-height: 150%;
+        margin-bottom: 10%;
+        padding-left: 0 !important;
+    }
+
+    #kezdolap .fooldalGomb {
+        padding-right: 0% !important;
+    }
+
+    #kezdolap .text-box .btn-full {
+        color: white;
+        font-size: 0.9rem !important;
+        letter-spacing: 0.1rem !important;
+        word-spacing: 0.25rem !important;
+        margin-bottom: 15% !important;
+        margin-left: 0% !important;
+        padding: 0.75rem 2.25rem;
+        text-decoration: none;
+        border: 0.1rem solid #257cda;
+        border-radius: 200px 20px 200px 20px !important;
+        background-image: linear-gradient(to right, rgba(13, 13, 13, 0.5) 0%, rgba(13, 13, 13, 0.9) 51%, rgba(13, 13, 13, 0.5) 100%);
+        background-size: 200% auto;
+        transition: 0.5s;
+        box-shadow: 0 0 0 1px rgba(13, 13, 13, 0.2);
+    }
+    
+    #kezdolap .text-box .btn-full:hover,
+    #kezdolap .text-box .btn-full:active {
+        background-position: right center;
+    }
+    
+    #kezdolap .btn.focus, .btn:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    #kezdolap .keretes {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-top: 7%;
+        padding-right: 5%;
+        padding-bottom: 7%;
+        padding-left: 5%;
+    }
+    
+    #kezdolap .keretes h3 {
+        font-size: 1rem !important;
+    }
+}
+
+
+/******************************/
+        /* RÓLUNK */
+/******************************/
+
+
+#rolunk {
+    color: white;
+    background-image: linear-gradient(to right bottom, rgba(13,13,13,0.96), rgba(13,13,13,0.98));
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#rolunk .kourmanSzoveg {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 300 !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.05rem !important;
+    word-spacing: 0.25rem !important;
+    text-shadow: 0rem 0rem 0.5rem white;
+}
+
+#rolunk .mitJelentSzoveg {
+    color: #257cda;
+    text-transform: uppercase;
+    font-weight: 300 !important;
+    font-size: 1.75rem !important;
+    letter-spacing: 0.05rem !important;
+    word-spacing: 0.25rem !important;
+    text-shadow: 0rem 0rem 0.5rem #257cda;
+}
+
+#rolunk .szovegesSzoveg {
+    color: #eee;
+    text-transform: uppercase;
+    font-weight: 300 !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.05rem !important;
+    word-spacing: 0.25rem !important;
+}
+
+#rolunk .rolunkIkon {
+    font-size: 3rem;    
+}
+
+#rolunk .rolunkH3 {
+    color: #257cda;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+    word-spacing: 0.25rem;
+    text-shadow: 0rem 0rem 0.5rem #257cda;
+}
+
+#rolunk .rolunkP {
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+    word-spacing: 0.25rem;
+}
+
+#rolunk .lefeleNyilIkon {
+    color: white;
+    font-size: 2.5rem;
+    transition: text-shadow 0.3s;
+}
+
+#rolunk .lefeleNyilIkon:hover,
+#rolunk .lefeleNyilIkon:active {
+    text-shadow: 0rem 0rem 0.5rem white;
+}
+
+@media only screen and (max-width: 576px) { 
+    #rolunk .kourmanSzoveg {
+        font-size: 0.7rem !important;
+    }
+
+    #rolunk .mitJelentSzoveg {
+        font-size: 1.5rem !important;
+    }
+}
+
+
+/******************************/
+    /* HÁZHOZSZÁLLÍTÓS */
+/******************************/
+
+
+#hazhozszallitos {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(./resources/img/burgerFekete.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#hazhozszallitos .text-box {
+    color: white;
+}
+
+#hazhozszallitos .text-box .felsoP {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.25rem;
+    text-align: center;
+}
+
+#hazhozszallitos .text-box .hazhozh1 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.25rem;
+    text-align: center;
+    text-shadow: 0rem 0rem 0.5rem white;
+}
+
+#hazhozszallitos .text-box .hazhozh3 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    word-spacing: 0.25rem;
+    text-align: center;
+}
+
+#hazhozszallitos .visszukSpan {
+    font-size: 1.10rem;
+}
+
+#hazhozszallitos .jelentkezzBeP {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    word-spacing: 0.25rem;
+    line-height: 200%;
+    text-align: center;
+}
+
+#hazhozszallitos .kozepCsik {
+    border-top: 0.05rem #257cda solid;
+}
+
+#hazhozszallitos .text-box .btn-full {
+    background-image: linear-gradient(to right, #257cda 0%, #164b83 51%, #257cda 100%);
+    background-size: 200% auto;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    color: white;
+    text-decoration: none;
+    border: 0.1rem solid #257cda;
+    transition: 0.5s;
+    box-shadow: 0 0 0 1px rgba(13, 13, 13, 0.2);
+}
+
+#hazhozszallitos .text-box .btn-full:hover,
+#hazhozszallitos .text-box .btn-full:active {
+    background-position: right center;
+}
+
+@media only screen and (max-width: 1366px) { 
+    #hazhozszallitos {
+        background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(./resources/img/burgerFekete.jpg);
+        background-size: cover;
+        background-position: center;
+        padding-bottom: 5%;
+    }    
+}
+
+@media only screen and (max-width: 1024px) {
+    #hazhozszallitos .text-box .felsoP {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    #hazhozszallitos .text-box .hazhozh1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 576px) { 
+    #hazhozszallitos .text-box .felsoP {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    #hazhozszallitos .text-box .hazhozh1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #hazhozszallitos .text-box .hazhozh3 {
+        font-size: 0.9rem;
+    }
+    
+    #hazhozszallitos .visszukSpan {
+        font-size: 1rem;
+    }
+
+    #hazhozszallitos .jelentkezzBeP {
+        font-size: 0.9rem;
+        line-height: 200%;
+        text-align: center;
+    }
+
+    #hazhozszallitos .text-box .btn-full {
+        background-image: linear-gradient(to right, #257cda 0%, #164b83 51%, #257cda 100%);
+        background-size: 200% auto;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+        color: white;
+        text-decoration: none;
+        border: 0.1rem solid #257cda;
+        transition: 0.5s;
+        box-shadow: 0 0 0 1px rgba(13, 13, 13, 0.2);
+    }
+    
+    #hazhozszallitos .text-box .btn-full:hover,
+    #hazhozszallitos .text-box .btn-full:active {
+        background-position: right center;
+    }
+}

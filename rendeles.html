@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rendelés leadása</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="./resources/css/rendelesStyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'/>
+
+</head>
+
+<body onload="idojarasWidget()">
+    
+    <section id="menusav">
+
+        <nav id="navigacio" class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#osszeccsuk" aria-controls="osszeccsuk" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="osszeccsuk">
+        
+                <ul class="navbar-nav align-items-center text-center m-auto">
+                    <li class="nav-item pr-2 pl-2">
+                        <a href="index.html" class="nav-link">Kourman</a>
+                    </li>
+                    <li class="nav-item pr-2 pl-2">
+                        <a href="rolunk.html" class="nav-link"><i class="fas fa-receipt"></i> Rólunk</a>
+                    </li>
+                    <li class="nav-item pr-2 pl-2">
+                        <a href="#" class="nav-link" data-toggle="modal" data-target="#akcioModal"><i class="fas fa-percentage"></i> Akciók</a>
+                    </li>
+                    <li class="nav-item pr-2 pl-2">
+                        <a href="rendeles.html" class="nav-link"><i class="fas fa-shipping-fast"></i> Rendelés</a>
+                    </li>
+                    <li class="nav-item pr-2 pl-2">
+                        <a href="kapcsolat.html" class="nav-link"><i class="far fa-building"></i> Kapcsolat</a>
+                    </li>
+                </ul>
+    
+            </div>
+        
+        </nav>
+
+        <div class="modal fade" id="akcioModal" tabindex="-1" role="dialog" aria-labelledby="akcioModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header align-items-center mt-5 pt-5">
+                        <h5 class="modal-title text-left pl-3" id="akcioModalLabel">Akcióink</h5>
+                        <span id="homerseklet" class="col text-right"></span>
+                    </div>
+
+                    <div class="modal-body align-items-center text-center">
+                        <div class="container">
+
+                            <div class="row pt-3">
+                                <div class="col">
+                                    <form>
+                                        <form class="form-inline">
+                                            <label for="szosz" class="napLabel pb-2">Kérlek, válassz napot: </label>
+                                            <select class="form-control form-control-sm mt-1 mb-5" id="nap" onclick="idojarasWidget()">
+                                                <option selected value="0">Hétfő</option>
+                                                <option value="1">Kedd</option>
+                                                <option value="2">Szerda</option>
+                                                <option value="3">Csütörtök</option>
+                                                <option value="4">Péntek</option>
+                                                <option value="5">Szombat</option>
+                                                <option value="6">Vasárnap</option>
+                                            </select>               
+                                        </form>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="row pt-2 pb-5">
+                                <div id="ajanlat" class="col"></div>
+                            </div>
+
+                            <div class="row pt-3 pb-4">
+                                <div id="minHom" class="col-md-4"></div>
+                                <div id="maxHom" class="col-md-4"></div>
+                                <div id="atlagHom" class="col-md-4"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="closeGomb btn btn-secondary" data-dismiss="modal">Bezárás</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="rendeles">     <!-- RENDELÉS -->
+        <div class="container pb-1">
+            <div class="jumbotron">
+                
+                <h1 class="display-4 mt-4">Megrendelés leadása</h1>
+                <p class="lead">Az alábbi adatlap kitöltésével egyszerűen és könnyedén leadhatod rendelésed. <br> 
+                    <span class="arSzoveg"><b>A hagyományos Royal Burger ára 1600 Ft.</b></span> <br> 
+                    <span class="hazhozSzoveg"><b>Házhozszállítás díja: 5000 Ft feletti rendelés esetén díjmentes, egyéb esetben 500 Ft.</b></span>
+                </p>
+                <hr class="my-4">
+
+                <form>
+
+                    <div class="form-row">      <!-- Vezetéknév - keresztnév -->
+                        <div class="col-md-6 mb-3">
+                            <label for="validationVezeteknev">Vezetéknév <span class="csillag">*</span></label>
+                            <input type="text" class="form-control" id="validationVezeteknev" placeholder="Kiss" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationKeresztnev">Keresztnév <span class="csillag">*</span></label>
+                            <input type="text" class="form-control" id="validationKeresztnev" placeholder="Péter" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">    <!-- E-mail cím -->
+                        <label for="emailInput">E-mail cím <span class="csillag">*</span></label>
+                        <input type="email" class="form-control form-control-sm" id="emailInput" placeholder="pelda@royal.com" required>
+                    </div>
+
+                    <div class="form-row">      <!-- Szállítási cím -->
+                        <div class="col-md-3 mb-3">
+                            <label for="validationVaros">Város <span class="csillag">*</span></label>
+                            <input type="text" class="form-control form-control-sm" id="validationVaros" placeholder="Budapest" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationUtca">Utca - házszám <span class="csillag">*</span></label>
+                            <input type="text" class="form-control form-control-sm" id="validationUtca" placeholder="Király utca 1." required>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="validationIranyitoszam">Irányítószám <span class="csillag">*</span></label>
+                            <input type="number" class="form-control form-control-sm" id="validationIranyitoszam" placeholder="1234" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">    <!-- Megjegyzés -->
+                        <label for="megjegyzes">Megjegyzés</label>
+                        <textarea class="form-control form-control-sm" id="megjegyzes" rows="3"></textarea>
+                    </div>
+
+                    <fieldset class="form-group mt-4 mb-4">       <!-- Feltétek -->
+                        <div class="row">
+                            <legend class="col-form-label col-sm-2 pt-0">Extra feltétek</legend>
+                            <div class="col-sm-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="feltet0" value="0" checked>
+                                        <label class="form-check-label" for="feltet0">
+                                            Nincs
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="feltet1" value="300">
+                                        <label class="form-check-label" for="feltet1">
+                                            Sajt (+300 Ft)
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="feltet2" value="400">
+                                        <label class="form-check-label" for="feltet2">
+                                            Bacon (+400 Ft)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="feltet3" value="1000">
+                                        <label class="form-check-label" for="feltet3">
+                                            Dupla hús (+1000 Ft)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="feltet4" value="650">
+                                        <label class="form-check-label" for="feltet4">
+                                            Sajt és bacon (+650 Ft)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="feltet5" value="1250">
+                                        <label class="form-check-label" for="feltet5">
+                                            Dupla hús és sajt (1250 Ft)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="feltet6" value="1350">
+                                        <label class="form-check-label" for="feltet6">
+                                            Dupla hús és bacon (1350 Ft)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="feltet7" value="1600">
+                                        <label class="form-check-label" for="feltet7">
+                                            Dupla hús, sajt és bacon (1600 Ft)
+                                        </label>
+                                    </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <form class="form-inline">      <!-- Szósz -->
+                        <label for="szosz">Szósz</label>
+                        <select class="form-control form-control-sm mt-1 mb-4" id="szosz">
+                            <option selected value="0">Hagyományos ( nincs felár )</option>
+                            <option value="150">Csípős ( 150 Ft )</option>
+                            <option value="200">Tzatziki ( 200 Ft )</option>
+                        </select>               
+                    </form>
+
+                    <div class="form-group mb-5">    <!-- Mennyiség -->     
+                        <label for="mennyiseg">Mennyiség <span class="csillag">*</span></label>
+                        <input type="number" class="form-control form-control-sm mt-1" id="mennyiseg" value="1" min="1" max="20" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+                    </div>
+
+                    <div class="row mt-5 mb-5">
+                        <div class="col-6">
+                            <p class="fizetendo">Végösszeg: <span class="osszeg">0 </span> <span class="csillag">Ft</span></p>
+                        </div>
+                        <div class="col-6 text-right align-middle">
+                            <button class="btn btn-primary" type="submit" id="kiszamitGomb" onclick="kiszamit()">Végösszeg kiszámítása</button>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button class="btn btn-primary" type="submit" id="megrendelGomb" onclick="rendelesLeadas()">Megrendelem!</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="./resources/js/idojaras.js"></script>
+    <script src="./resources/js/megrendeles.js"></script>
+    <script src="./resources/js/scrollNav.js"></script>
+    <script src="https://kit.fontawesome.com/6241e89c41.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+</html>
